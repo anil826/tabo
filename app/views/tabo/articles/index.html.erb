@@ -1,35 +1,37 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <p id="notice"><%= notice %></p>
+<section class="bg-success pad">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p id="notice"><%= notice %></p>
+      </div>
+      <div class="col-md-12 text-center">
+        <h1>Listing Articles</h1>
+      </div>
     </div>
-    <div class="col-md-12 text-center">
-      <h1>Listing Articles</h1>
+    <div class="row">
+      <div class="col-md-4"><b>Title</b></div>
+      <div class="col-md-6"><b>Text</b></div>
+      <div class="col-md-2"><b>Action</b></div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4"><b>Title</b></div>
-    <div class="col-md-6"><b>Text</b></div>
-    <div class="col-md-2"><b>Action</b></div>
-  </div>
-  <hr/>
-  <div>
-    <% @articles.each do |article| %>
-        <div class="row">
-          <div class="col-md-9">
-            <strong><%= article.title %></strong>
-            <%= article.text %>
-          </div>
-          <div class="col-md-3">
-            <div class="pull-right">
-              <div class="btn btn-md btn-default"> <%= link_to 'Show', article %></div>
-              <div class="btn btn-md btn-default"><%= link_to 'Edit', edit_article_path(article) %></div>
-              <div class="btn btn-md btn-default"><%= link_to 'Destroy', article, method: :delete, data: {confirm: 'Are you sure?'} %></div>
+    <hr/>
+    <div>
+      <% @articles.each do |article| %>
+          <div class="row">
+            <div class="col-md-9">
+              <strong><%= article.title %></strong>
+              <%= article.text %>
+            </div>
+            <div class="col-md-3">
+              <div class="pull-right">
+                <%= link_to 'Show', article, class: "btn btn-md btn-info" %>
+                <%= link_to 'Edit', edit_article_path(article), class: "btn btn-md btn-default" %>
+                <%= link_to 'Destroy', article, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-md btn-default" %>
+              </div>
             </div>
           </div>
-        </div>
-        <hr/>
-    <% end %>
+          <hr/>
+      <% end %>
+    </div>
+    <%= link_to 'New Article', new_article_path, class: "btn btn-success pull-left" %>
   </div>
-  <div class="btn btn-default pull-left"><%= link_to 'New Article', new_article_path %></div>
-</div>
+</section>

@@ -4,22 +4,47 @@
   <title>Tabo</title>
   <%= stylesheet_link_tag "tabo/application", media: "all" %>
   <%= javascript_include_tag "tabo/application" %>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="container-fluid">
-  <ul class="nav nav-tabs navbar-default header">
-    <li class="active">
-      <%= link_to 'Home', root_path %>
-    </li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to 'Anil Yadav', root_path, class: "navbar-brand page-scroll" %>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
     <form class="navbar-form pull-right">
       <input type="text" class="span2">
       <button type="submit" class="btn btn-default">Search
       </button>
     </form>
-  </ul>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
 </div>
 <%= yield %>
 </body>

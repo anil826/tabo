@@ -1,24 +1,35 @@
-<div class="container">
-  <div class="col-md-10">
-    <p id="notice"><%= notice %></p>
-
-    <h1> <%= @article.title %></h1>
-    <pre><code><%= @article.text %></code></pre>
-    <p>
-      <strong>Created at:</strong>
-      <%= @article.created_at %>
-    </p>
-
-    <%= link_to 'Edit', edit_article_path(@article) %> |
-    <%= link_to 'Back', articles_path %>
+<section class="header">
+  <div class="container-fluid">
+    <div class="col-md-12">
+      <%#= image_tag "tabo/header.jpg" %>
+    </div>
   </div>
-  <div class="col-md-2 pad">
-    <% @articles.each do |article| %>
-        <ul class="nav navbar-btn">
-          <li class="<%= 'active' if @article == article %>">
-            <%= link_to "#{article.title}", article %>
-          </li>
-        </ul>
-    <% end %>
+</section>
+<section class="bg-info">
+  <div class="container">
+    <div class="col-md-10">
+      <p id="notice"><%= notice %></p>
+
+      <h3> <%= @article.title %></h3>
+      <pre><code><%= @article.text %></code></pre>
+      <p>
+        <strong>Created at:</strong>
+        <%= @article.created_at %>
+      </p>
+
+      <div class="col-md-12">
+        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-md btn-default pull-right" %>
+        <%= link_to 'Back', articles_path, class: "btn btn-md btn-default pull-right" %>
+      </div>
+    </div>
+    <div class="col-md-2 pad">
+      <% @articles.each do |article| %>
+          <ul class="nav navbar-btn">
+            <li class="<%= 'active' if @article == article %>">
+              <%= link_to "#{article.title}", article %>
+            </li>
+          </ul>
+      <% end %>
+    </div>
   </div>
-</div>
+</section>

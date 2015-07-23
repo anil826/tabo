@@ -1,13 +1,11 @@
 <div class="container">
   <%= form_for(@article) do |f| %>
       <% if @article.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-            <ul>
-              <% @article.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-              <% end %>
+          <div class="alert-warning" role="alert">
+            <%= pluralize(@article.errors.count, "error") %>
+            <% @article.errors.full_messages.each do |message| %>
+                <%= message %>
+            <% end %>
             </ul>
           </div>
       <% end %>
@@ -21,7 +19,7 @@
           <%= f.text_area :text, class: "form-control", :rows => "15" %>
         </div>
         <div class="submit">
-          <%= f.submit "Submit", class: "btn btn-default" %>
+          <%= f.submit "Submit", class: "btn btn-success" %>
         </div>
   <% end %>
   </form>

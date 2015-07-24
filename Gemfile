@@ -9,7 +9,13 @@ gemspec
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
-
+gem 'turbolinks'
+gem 'jquery-rails'
+gem "ckeditor"
+# See https://github.com/joliss/jquery-ui-rails for more documentation
+# Use jquery ui components
+gem 'jquery-ui-rails'
+gem 'ckeditor_rails'
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 

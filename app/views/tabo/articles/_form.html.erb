@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
           <%= f.label :text %><br>
-          <%= f.text_area :text, class: "form-control", :rows => "15" %>
+          <%= f.text_area :text, class: "ckeditor" %>
         </div>
         <div class="submit">
           <%= f.submit "Submit", class: "btn btn-success" %>
@@ -24,3 +24,9 @@
   <% end %>
   </form>
 </div>
+
+
+<script>
+    $('.ckeditor').ckeditor({
+    });
+</script>

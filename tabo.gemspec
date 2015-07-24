@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
   s.add_dependency "turbolinks"
   s.add_dependency "ckeditor_rails"
+  s.add_dependency 'social-share-button', '~> 0.1.6'
 
   s.add_development_dependency "sqlite3"
 end

@@ -16,6 +16,7 @@ gem "ckeditor"
 # Use jquery ui components
 gem 'jquery-ui-rails'
 gem 'ckeditor_rails'
+gem 'social-share-button', '~> 0.1.6'
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 

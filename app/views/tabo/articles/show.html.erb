@@ -16,7 +16,8 @@
         <strong>Created at:</strong>
         <%= @article.created_at %>
       </p>
-
+      <h4>Sharing Social Network</h4>
+      <%= social_share_button_tag(@article.title, :popup => "true") %>
       <div class="col-md-12">
         <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-md btn-default pull-right" %>
         <%= link_to 'Back', articles_path, class: "btn btn-md btn-default pull-right" %>

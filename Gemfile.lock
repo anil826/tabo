@@ -3,6 +3,7 @@ PATH
   specs:
     tabo (0.0.1)
       ckeditor_rails
+      friendly_id
       jquery-rails
       rails (~> 4.2.3)
       social-share-button (~> 0.1.6)
@@ -66,6 +67,8 @@ GEM
     coffee-script-source (1.9.1.1)
     erubis (2.7.0)
     execjs (2.5.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -145,6 +148,7 @@ PLATFORMS
 DEPENDENCIES
   ckeditor
   ckeditor_rails
+  friendly_id
   jquery-rails
   jquery-ui-rails
   social-share-button (~> 0.1.6)

@@ -11,7 +11,7 @@
       <p id="notice"><%= notice %></p>
 
       <h3> <%= @article.title %></h3>
-      <pre><code><%= @article.text %></code></pre>
+      <pre><code><%= @article.text.html_safe %></code></pre>
       <p>
         <strong>Created at:</strong>
         <%= @article.created_at %>

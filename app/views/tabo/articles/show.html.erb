@@ -1,13 +1,13 @@
-<section class="header">
+<div class="header">
   <div class="container-fluid">
     <div class="col-md-12">
-      <%#= image_tag "tabo/header.jpg" %>
+          <%#= image_tag "tabo/header.jpg" %>
     </div>
   </div>
-</section>
-<section class="bg-info">
+</div>
+<div class="row">
   <div class="container">
-    <div class="col-md-10">
+    <div class="col-md-9">
       <p id="notice"><%= notice %></p>
 
       <h3> <%= @article.title %></h3>
@@ -18,19 +18,16 @@
       </p>
       <h4>Sharing Social Network</h4>
       <%= social_share_button_tag(@article.title, :popup => "true") %>
-      <div class="col-md-12">
-        <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-md btn-default pull-right" %>
-        <%= link_to 'Back', articles_path, class: "btn btn-md btn-default pull-right" %>
-      </div>
+      <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-md btn-default pull-right" %>
+      <%= link_to 'Back', articles_path, class: "btn btn-md btn-default pull-right" %>
     </div>
-    <div class="col-md-2 pad">
+    <div class="col-md-2 col-md-offset-1 pull-right pad">
+      <h4>Other Link</h4>
       <% @articles.each do |article| %>
-          <ul class="nav navbar-btn">
-            <li class="<%= 'active' if @article == article %>">
-              <%= link_to "#{article.title}", article %>
-            </li>
-          </ul>
+          <ol class="<%= 'active' if @article == article %>">
+            <%= link_to "#{article.title}", article %>
+          </ol>
       <% end %>
     </div>
   </div>
-</section>
+</div>

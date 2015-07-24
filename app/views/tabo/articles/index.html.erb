@@ -13,7 +13,7 @@
       <div class="col-md-6"><b>Text</b></div>
       <div class="col-md-2"><b>Action</b></div>
     </div>
-    <hr/>
+    <hr class="hr_css"/>
     <div>
       <% @articles.each do |article| %>
           <div class="row">
@@ -29,7 +29,7 @@
               </div>
             </div>
           </div>
-          <hr/>
+          <hr class="hr_css"/>
       <% end %>
     </div>
     <%= link_to 'New Article', new_article_path, class: "btn btn-success pull-left" %>

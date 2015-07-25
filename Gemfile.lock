@@ -8,6 +8,8 @@ PATH
       rails (~> 4.2.3)
       social-share-button (~> 0.1.6)
       turbolinks
+      will_paginate (~> 3.0.6)
+      will_paginate-bootstrap
 
 GEM
   remote: https://rubygems.org/
@@ -141,6 +143,9 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    will_paginate (3.0.7)
+    will_paginate-bootstrap (1.0.1)
+      will_paginate (>= 3.0.3)
 
 PLATFORMS
   ruby
@@ -155,3 +160,5 @@ DEPENDENCIES
   sqlite3
   tabo!
   turbolinks
+  will_paginate (~> 3.0.6)
+  will_paginate-bootstrap

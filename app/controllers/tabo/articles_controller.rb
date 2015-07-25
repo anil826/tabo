@@ -3,7 +3,7 @@ require_dependency "tabo/application_controller"
 module Tabo
   class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
-    before_action :get_article, only: [:show,:index]
+    before_action :get_article, only: [:show, :index]
     # GET /articles
     def index
     end
@@ -33,7 +33,8 @@ module Tabo
     end
 
     def get_article
-      @articles = Article.all
+      # @articles = Article.all
+      @articles = Article.paginate(:page => params[:page],:per_page => 10)
     end
 
     # PATCH/PUT /articles/1

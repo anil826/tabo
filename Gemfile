@@ -21,3 +21,5 @@ gem 'friendly_id'
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'

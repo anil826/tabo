@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'friendly_id'
   s.add_dependency 'will_paginate', '~> 3.0.6'
   s.add_dependency 'will_paginate-bootstrap'
+  s.add_dependency 'sunspot_rails'
+  s.add_dependency 'sunspot_solr'
 
   s.add_development_dependency "sqlite3"
 end

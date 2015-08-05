@@ -33,12 +33,15 @@
           <li>
             <a class="page-scroll" href="#contact">Contact</a>
           </li>
-          <form class="navbar-form pull-right">
-            <input type="text" class="span2">
-            <button type="submit" class="btn btn-primary">Search
-            </button>
-          </form>
-
+          <!--<form class="navbar-form pull-right">-->
+          <!--<input type="text" class="span2">-->
+          <!--<button type="submit" class="btn btn-primary">Search-->
+          <!--</button>-->
+          <!--</form>-->
+          <%= form_tag articles_path, :method => :get, :class => "navbar-form pull-right" do %>
+              <%= text_field_tag :search, params[:search], :class => "span2" %>
+              <%= submit_tag "Search", :title => nil, :class => "btn btn-primary" %>
+          <% end %>
         </ul>
       </div>
       <!-- /.navbar-collapse -->

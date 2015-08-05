@@ -6,6 +6,10 @@ module Tabo
     before_action :get_article, only: [:show, :index]
     # GET /articles
     def index
+     @search = Article.search do 
+         fulltext params[:search]
+     end
+     @articles = @search.results
     end
 
     # GET /articles/1

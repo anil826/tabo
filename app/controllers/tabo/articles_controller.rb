@@ -6,10 +6,10 @@ module Tabo
     before_action :get_article, only: [:show, :index]
     # GET /articles
     def index
-     @search = Article.search do 
-         fulltext params[:search]
-     end
-     @articles = @search.results
+      @search = Article.search do
+        fulltext params[:search]
+      end
+      @articles = @search.results if params[:search]
     end
 
     # GET /articles/1
@@ -38,7 +38,7 @@ module Tabo
 
     def get_article
       # @articles = Article.all
-      @articles = Article.paginate(:page => params[:page],:per_page => 10)
+      @articles = Article.paginate(:page => params[:page], :per_page => 10)
     end
 
     # PATCH/PUT /articles/1

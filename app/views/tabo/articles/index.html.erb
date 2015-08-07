@@ -1,4 +1,4 @@
-<section class="bg-success pad">
+<section class="pad">
   <div class="container">
     <%= link_to 'New Article', new_article_path, class: "btn3d btn btn-success pull-right" %>
     <div class="row">
@@ -9,18 +9,14 @@
         <h1>Listing Articles</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-4"><b>Title</b></div>
-      <div class="col-md-6"><b>Text</b></div>
-      <div class="col-md-2"><b>Action</b></div>
-    </div>
-    <hr class="hr_css"/>
+
     <div>
       <% @articles.each do |article| %>
           <div class="row">
             <div class="col-md-9">
-              <strong><%= article.title %></strong>
+              <strong><%= article.title %></strong><br />
               <%= article.text.html_safe %>
+              <hr class="hr_css"/>
             </div>
             <div class="col-md-3">
               <div class="pull-right">
@@ -30,7 +26,6 @@
               </div>
             </div>
           </div>
-          <hr class="hr_css"/>
       <% end %>
     </div>
     <%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
